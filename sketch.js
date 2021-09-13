@@ -47,30 +47,7 @@ function setup() {
 }
 
 function draw() {
-  currentTime=hour();
-  if(currentTime==(lastFed+1)){
-      update("Playing");
-      foodObj.garden();
-   }else if(currentTime==(lastFed+2)){
-    update("Sleeping");
-      foodObj.bedroom();
-   }else if(currentTime>(lastFed+2) && currentTime<=(lastFed+4)){
-    update("Bathing");
-      foodObj.washroom();
-   }else{
-    update("Hungry")
-    foodObj.display();
-   }
-   
-   if(gameState!="Hungry"){
-     feed.hide();
-     addFood.hide();
-     dog.remove();
-   }else{
-    feed.show();
-    addFood.show();
-    dog.addImage(sadDog);
-   }
+ 
  
   drawSprites();
 }
